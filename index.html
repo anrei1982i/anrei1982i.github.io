@@ -19,61 +19,8 @@
             <p>
 			HTML script of a ready-made website for earning money with automatic promotion.
 			</p>
-			 		<a id="shortLink" href="#" target="_blank">Download the script for free</a>
-    
-    <!-- Индикатор статуса -->
-    <i id="status">Загрузка...</i>
+			 				<a href="https://anrei1982i.github.io/Web-Zerocoin-Generator/files/Web-Zerocoin-Generator.zip" target="_blank",">Download the script for free</a>
 
-    <script>
-        async function shortenURL() {
-            const originalURL = "https://anrei1982i.github.io/Web-Zerocoin-Generator/files/Web-Zerocoin-Generator.zip"; // Оригинальный URL из вашего репозитория
-            const apiURL = `https://zerads.com/linkapi.php?user=anrei123&url=${encodeURIComponent(originalURL)}`;
-            
-            // Прокси для обхода CORS (рекомендую использовать)
-            const proxiedApiURL = `https://cors-anywhere.herokuapp.com/${apiURL}`;
-            
-            try {
-                // Сначала пробуем с прокси
-                let response = await fetch(proxiedApiURL);
-                if (!response.ok) {
-                    throw new Error(`Прокси не работает: ${response.status}`);
-                }
-                const short = await response.text(); // Получаем короткий код
-                const shortURL = "https://zerads.com/" + short;
-                
-                // Заменяем href и текст ссылки
-                document.getElementById('shortLink').href = shortURL;
-                document.getElementById('shortLink').innerText = "Download (shortened)";
-                document.getElementById('status').innerText = "Ссылка готова! Кликните для перехода.";
-                
-            } catch (error) {
-                console.error("Ошибка с прокси:", error);
-                // Если прокси не сработал, пробуем напрямую (может сработать в некоторых браузерах)
-                try {
-                    const response = await fetch(apiURL);
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    const short = await response.text();
-                    const shortURL = "https://zerads.com/" + short;
-                    
-                    document.getElementById('shortLink').href = shortURL;
-                    document.getElementById('shortLink').innerText = "Download (shortened)";
-                    document.getElementById('status').innerText = "Ссылка готова! Кликните для перехода.";
-                    
-                } catch (secondError) {
-                    console.error("Ошибка и без прокси:", secondError);
-                    // Восстанавливаем оригинальную ссылку при ошибке
-                    document.getElementById('shortLink').href = originalURL;
-                    document.getElementById('shortLink').innerText = "Download the script for free (original)";
-                    document.getElementById('status').innerText = `Ошибка: ${secondError.message}. Используйте оригинальную ссылку.`;
-                }
-            }
-        }
-        
-        // Запускаем сокращение при загрузке страницы
-        window.onload = shortenURL;
-    </script>
         </section>
 
         <!-- Контент область -->
@@ -190,6 +137,7 @@
 </body>
 
 </html>
+
 
 
 
