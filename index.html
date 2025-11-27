@@ -32,31 +32,49 @@
                 </div>
                 <div class="feature">
                     <b>For example, below are several advertising banners</b>
-					<div class="ads-block">
-                    <iframe class="ad-iframe" id="ad1" onload="IFR = this; setTimeout('IFR.src = IFR.src', 10000) "src="https://zerads.com/ad/ad.php?width=468&ref=9822" marginwidth="0" marginheight="0" width="468" height="60" scrolling="no" border="0" frameborder="0"></iframe>
-                    </div>
-                    <div class="ads-block">
-                    <iframe class="ad-iframe" id="ad2" onload="IFR = this; setTimeout('IFR.src = IFR.src', 10000) "src="https://ad2bitcoin.com/ad.php?ref=anrei123&width=468" marginwidth="0" marginheight="0" width="468" height="60" scrolling="no" border="0" frameborder="0"></iframe>
-                    </div>
-                   <div class="ads-block-large" data-original-width="728">
-                    <iframe class="ad-iframe" id="ad3" onload="IFR = this; setTimeout('IFR.src = IFR.src', 15000)" src="https://zerads.com/ad/ad.php?width=728&ref=9822" marginwidth="0" marginheight="0" width="728" height="90" scrolling="no" border="0" frameborder="0"></iframe>
-                    </div>
-                   <script>
-function resizeAds() {
-// Находим все блоки с классом ads-block
-const adsBlocks = document.querySelectorAll('.ads-block, .ads-block-large');
+					<div id="ads-block"> 
+<div id="ad1" class="ad">
+<iframe class="ad-iframe" id="ad1" onload="IFR = this; setTimeout('IFR.src = IFR.src', 15000)" src="https://zerads.com/ad/ad.php?width=468&ref=5551" marginwidth="0" marginheight="0" width="468" height="60" scrolling="no" border="0" frameborder="0"></iframe>
+</div></div>
+<div id="ads-block"> 
+<div id="ad2" class="ad">
+<iframe onload="IFR = this; setTimeout ('IFR.src = IFR.src', 20000)" src="https://zerads.com/ad/ad.php?width=468&ref=9822" marginwidth="0" marginheight="0" width="468" height="60" scrolling="no" border="0" frameborder="0"></iframe>
+</div>
+</div>
+<div id="ads-block-2">
+<div id="ad3" class="ad">
+<iframe src="https://zerads.com/ad/ad.php?width=728&ref=9822" marginwidth="0" marginheight="0" width="728" height="90" scrolling="no" border="0" frameborder="0"></iframe>	
+</div>
+		</div><script>
+  const adsBlock1 = document.getElementById('ads-block');
+  const adsBlock2 = document.getElementById('ads-block-2');
+  const ads1 = [
+    document.getElementById('ad1'),
+    document.getElementById('ad2')
+  ];
+  const ads2 = [
+    document.getElementById('ad3')
+  ];
 
-adsBlocks.forEach(block => {
-  const iframe = block.querySelector('.ad-iframe'); // Находим iframe внутри блока
-  if (iframe) {
-    const blockWidth = block.offsetWidth;
-    const scale = blockWidth / 468; // Исходная ширина iframe = 468px
-    iframe.style.transform = `scale(${scale})`;
-    iframe.style.transformOrigin = '0 0';
+  function resizeAds() {
+    const adsBlockWidth1 = adsBlock1.offsetWidth;
+    const adsBlockWidth2 = adsBlock2.offsetWidth;
+    const scale = adsBlockWidth1 / 468;
+    const scale2 = adsBlockWidth2 / 728;
+
+    ads1.forEach((ad) => {
+      ad.style.transform = `scale(${scale})`;
+      ad.style.transformOrigin = '0 0';
+    });
+
+    ads2.forEach((ad) => {
+      ad.style.transform = `scale(${scale2})`;
+      ad.style.transformOrigin = '0 0';
+    });
   }
-}
 
-window.addEventListener('resize', resizeAds);
+  window.addEventListener('resize', resizeAds);
+  resizeAds();
 </script>
             <div id="webtraf_5384" style="width:100%;max-width:468px;height:60px;"><script src="https://webtrafic.ru/ads.php?uid=5384" async></script></div>
                 </div>
@@ -144,6 +162,7 @@ alt=""/></a><script>(function(d,s){d.getElementById("licnt6BCA").src=
 </body>
 
 </html>
+
 
 
 
