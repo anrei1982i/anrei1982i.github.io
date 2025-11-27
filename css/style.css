@@ -191,16 +191,20 @@
 	}
         }
                 @media (max-width: 468px) {
-                        .ads-block {
-             max-width: 378px;
-             }
-                         #ads-block {
-             max-width: 378px;
-            }
-                        .ads-block-large {
-    max-width: 378px; /* Для большого баннера */
-    margin: 0 auto;
-}
+              #ads-block {
+	max-width: 378px; 
+	margin: 0 auto;
+	margin-bottom:5px;
+	}
+	#ads-block-2 {
+	max-width: 378px; 
+	max-height: 50px;
+	margin: 0 auto;
+	}
+	.ad {
+	width: 100%; 
+	height: auto;
+	}
 
                 }
                 
@@ -226,6 +230,7 @@
                         max-width: 100%;
                         height: auto;
                 }
+
 
 
 
