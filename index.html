@@ -38,27 +38,31 @@
 					<div class="ads-block">
                     <iframe class="ad-iframe" id="ad2" onload="IFR = this; setTimeout('IFR.src = IFR.src', 15000)" src="https://ad2bitcoin.com/ad.php?ref=anrei123&width=468" marginwidth="0" marginheight="0" width="468" height="60" scrolling="no" border="0" frameborder="0"></iframe>
                     </div>
+					<div class="ads-block">
+                    <iframe class="ads-block-large" id="ad3" onload="IFR = this; setTimeout('IFR.src = IFR.src', 15000)" src="https://zerads.com/ad/ad.php?width=728&ref=9822" marginwidth="0" marginheight="0" width="728" height="90" scrolling="no" border="0" frameborder="0"></iframe>
+                    </div>
                    <script>
   function resizeAds() {
-    // Находим все блоки с классом ads-block
-    const adsBlocks = document.querySelectorAll('.ads-block');
+    // Находим все блоки с классом ads-block или ads-block-large
+    const adsBlocks = document.querySelectorAll('.ads-block, .ads-block-large');
     
     adsBlocks.forEach(block => {
-      const iframe = block.querySelector('.ad-iframe'); // Находим iframe внутри блока
-      if (iframe) {
-        const blockWidth = block.offsetWidth;
-        const scale = blockWidth / 468; // Исходная ширина iframe = 468px
-        iframe.style.transform = `scale(${scale})`;
-        iframe.style.transformOrigin = '0 0';
-      }
+        const iframe = block.querySelector('.ad-iframe'); // Находим iframe внутри блока
+        if (iframe) {
+            const blockWidth = block.offsetWidth;
+            const originalWidth = parseFloat(block.dataset.originalWidth) || 468; // Берем из data-атрибута, fallback на 468
+            const scale = blockWidth / originalWidth; // Масштаб на основе исходной ширины
+            iframe.style.transform = `scale(${scale})`;
+            iframe.style.transformOrigin = '0 0';
+        }
     });
-  }
+}
 
-  // Вызываем при загрузке страницы
-  resizeAds();
-  
-  // Вызываем при изменении размера окна
-  window.addEventListener('resize', resizeAds);
+// Вызываем при загрузке страницы
+resizeAds();
+
+// Вызываем при изменении размера окна
+window.addEventListener('resize', resizeAds);
 </script>
             <div id="webtraf_5384" style="width:100%;max-width:468px;height:60px;"><script src="https://webtrafic.ru/ads.php?uid=5384" async></script></div>
                 </div>
@@ -146,6 +150,7 @@ alt=""/></a><script>(function(d,s){d.getElementById("licnt6BCA").src=
 </body>
 
 </html>
+
 
 
 
