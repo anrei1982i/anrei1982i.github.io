@@ -1,4 +1,4 @@
-        * {
+       * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -22,7 +22,7 @@
         }
 
         /* Hero область */
-		
+                
         .hero {
             background: linear-gradient(135deg, #B20000 0%, #480061 100%);
             color: white;
@@ -43,26 +43,27 @@
             font-size: 1.2rem;
             max-width: 468px;
             margin: 0 auto;
-			margin-bottom:20px;
+                        margin-bottom:20px;
         }
-		.hero a{
-			color:#FFF;
-			padding:10px 25px;
-			border:2px solid #fff;
-			border-radius:25px;
-			text-decoration:none;
-			margin-bottom:20px;
-			box-shadow: 0 5px 10px rgba(0,0,0,0.9);
+                .hero a{
+                        color:#FFF;
+                        padding:10px 25px;
+                        border:2px solid #fff;
+                        border-radius:25px;
+                        text-decoration:none;
+                        margin-bottom:20px;
+                        display: inline-block;
+                        box-shadow: 0 5px 10px rgba(0,0,0,0.9);
     -webkit-transition: transform 0.3s ease;
     -moz-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
-		}
+                }
         .hero a:hover{
-			color:#FFDE58;
-			background:#0F141C;
-			border:2px solid #FFDE58;
-			transform: translateY(-5px);
-		}
+                        color:#FFDE58;
+                        background:#0F141C;
+                        border:2px solid #FFDE58;
+                        transform: translateY(-5px);
+                }
         /* Контент область */
         .content {
             flex: 1;
@@ -78,9 +79,9 @@
         #ads-block {
             max-width: 468px;
          }
-		 .ads-block {
+                 .ads-block {
             max-width: 468px;
-			margin:0 auto;
+                        margin:0 auto;
          }
         .ads-block-large {
     max-width: 468px; /* Для большого баннера */
@@ -105,8 +106,8 @@
             font-size: 1.4rem;
         }
         .feature img {
-			max-width:100%;
-		}
+                        max-width:100%;
+                }
         .about-text {
             background-color: #e2e8f0;
             padding: 25px;
@@ -171,26 +172,49 @@
             .content {
                 padding: 20px 15px;
             }
-			.ads-block {
+                        .ads-block {
              max-width: 468px;
              }
-			 #ads-block {
+                         #ads-block {
             max-width: 468px;
             }
         }
-		@media (max-width: 468px) {
-			.ads-block {
+                @media (max-width: 468px) {
+                        .ads-block {
              max-width: 378px;
              }
-			 #ads-block {
+                         #ads-block {
              max-width: 378px;
             }
-			.ads-block-large {
+                        .ads-block-large {
     max-width: 378px; /* Для большого баннера */
     margin: 0 auto;
 }
 
-		}
+                }
+                
+                .ad-iframe {
+                        width: 100%;
+                        height: 60px;
+                        border: none;
+                }
+                
+                .feature-images {
+                        display: flex;
+                        flex-wrap: wrap;
+                 gap: 10px;
+                 justify-content: center;
+                }
+                
+                .feature-images a {
+                        display: block;
+                        margin: 5px;
+                }
+                
+                .feature-images img {
+                        max-width: 100%;
+                        height: auto;
+                }
 
 
 
