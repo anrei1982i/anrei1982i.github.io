@@ -40,20 +40,19 @@
                     </div>
 	
                    <script>
-  function resizeAds() {
-    // Находим все блоки с классом ads-block или ads-block-large
-    const adsBlocks = document.querySelectorAll('.ads-block, .ads-block-large');
-    
-    adsBlocks.forEach(block => {
-        const iframe = block.querySelector('.ad-iframe'); // Находим iframe внутри блока
-        if (iframe) {
-            const blockWidth = block.offsetWidth;
-            const originalWidth = parseFloat(block.dataset.originalWidth) || 468; // Берем из data-атрибута, fallback на 468
-            const scale = blockWidth / originalWidth; // Масштаб на основе исходной ширины
-            iframe.style.transform = `scale(${scale})`;
-            iframe.style.transformOrigin = '0 0';
-        }
-    });
+function resizeAds() {
+// Находим все блоки с классом ads-block
+const adsBlocks = document.querySelectorAll('.ads-block');
+
+adsBlocks.forEach(block => {
+  const iframe = block.querySelector('.ad-iframe'); // Находим iframe внутри блока
+  if (iframe) {
+    const blockWidth = block.offsetWidth;
+    const scale = blockWidth / 468; // Исходная ширина iframe = 468px
+    iframe.style.transform = `scale(${scale})`;
+    iframe.style.transformOrigin = '0 0';
+  }
+});
 }
 
 // Вызываем при загрузке страницы
@@ -148,6 +147,7 @@ alt=""/></a><script>(function(d,s){d.getElementById("licnt6BCA").src=
 </body>
 
 </html>
+
 
 
 
