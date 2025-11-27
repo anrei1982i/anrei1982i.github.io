@@ -76,17 +76,20 @@
             font-size: 1.8rem;
             text-align: center;
         }
-        #ads-block {
-            max-width: 468px;
-         }
-                 .ads-block {
-            max-width: 468px;
-                        margin:0 auto;
-         }
-        .ads-block-large {
-    max-width: 468px; /* Для большого баннера */
-    margin: 0 auto;
-}
+#ads-block {
+	max-width: 468px; 
+	margin: 0 auto;
+	margin-bottom:5px;
+	}
+	#ads-block-2 {
+	max-width: 468px; 
+	max-height: 60px;
+	margin: 0 auto;
+	}
+	.ad {
+	width: 100%; 
+	height: auto;
+	}
         .features {
             display: grid;
             gap: 20px;
@@ -215,6 +218,7 @@
                         max-width: 100%;
                         height: auto;
                 }
+
 
 
 
