@@ -83,7 +83,7 @@
 			margin:0 auto;
          }
         .ads-block-large {
-    max-width: 728px; /* Для большого баннера */
+    max-width: 468px; /* Для большого баннера */
     margin: 0 auto;
 }
         .features {
@@ -191,5 +191,6 @@
 }
 
 		}
+
 
 
