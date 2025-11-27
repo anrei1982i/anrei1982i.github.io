@@ -176,12 +176,12 @@
                 padding: 20px 15px;
             }
            #ads-block {
-	max-width: 448px; 
+	max-width: 428px; 
 	margin: 0 auto;
 	margin-bottom:5px;
 	}
 	#ads-block-2 {
-	max-width: 448px; 
+	max-width: 428px; 
 	max-height: 50px;
 	margin: 0 auto;
 	}
@@ -226,6 +226,7 @@
                         max-width: 100%;
                         height: auto;
                 }
+
 
 
 
