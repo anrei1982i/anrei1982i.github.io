@@ -82,6 +82,10 @@
             max-width: 468px;
 			margin:0 auto;
          }
+        .ads-block-large {
+    max-width: 728px; /* Для большого баннера */
+    margin: 0 auto;
+}
         .features {
             display: grid;
             gap: 20px;
@@ -181,4 +185,9 @@
 			 #ads-block {
              max-width: 378px;
             }
+			.ads-block-large {
+    max-width: 378px; /* Для большого баннера */
+    margin: 0 auto;
+}
+
 		}
